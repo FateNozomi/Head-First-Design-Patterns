@@ -16,3 +16,11 @@ Definition:
     updated automatically.
 
 1.  Strive for loosely coupled designs between objects that interact.
+
+[DECORATOR PATTERN]
+Definition:
+    The Decorator Pattern attaches additional responsibilities to an object
+    dynamically. Decorators provide a flexible alternative to sub-classing for
+    extending functionality.
+
+1. Classes should be open for extension but closed for modification.
