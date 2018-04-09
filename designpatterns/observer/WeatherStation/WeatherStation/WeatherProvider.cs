@@ -27,5 +27,24 @@ namespace WeatherStation
 
             return new Unsubscriber<WeatherData>(observers, observer);
         }
+
+        public void SetMeasurements(float temperature, float humidity, float pressure)
+        {
+            WeatherData weatherData = new WeatherData(temperature, humidity, pressure);
+            foreach (IObserver<WeatherData> observer in observers)
+            {
+                observer.OnNext(weatherData);
+            }
+        }
+
+        public void EndService()
+        {
+            foreach (var observer in observers)
+            {
+                observer.OnCompleted();
+            }
+
+            observers.Clear();
+        }
     }
 }

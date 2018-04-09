@@ -6,57 +6,45 @@ using System.Threading.Tasks;
 
 namespace WeatherStation
 {
-    public class CurrentConditionsDisplay : IDisplayElement
+    public class CurrentConditionsDisplay : IObserver<WeatherData>, IDisplayElement
     {
         private WeatherData _weatherData;
-        private float _temperature;
-        private float _humidity;
-        private float _heatIndex;
+        private IDisposable _cancellation;
 
-        public CurrentConditionsDisplay(WeatherData weatherData)
+        public void Subscribe(WeatherProvider provider)
         {
-            _weatherData = weatherData;
+            _cancellation = provider.Subscribe(this);
         }
 
-        public void Update(float temperature, float humidity, float pressure)
+        public void Unsubscribe()
         {
-            _temperature = temperature;
-            _humidity = humidity;
-            _heatIndex = ComputeHeatIndex(_temperature, _humidity);
-            Display();
-        }
-
-        private float ComputeHeatIndex(float t, float rh)
-        {
-            float index =
-                (float)
-                (
-                (16.923 + (0.185212 * t)) +
-                (5.37941 * rh) -
-                (0.100254 * t * rh) +
-                (0.00941695 * (t * t)) +
-                (0.00728898 * (rh * rh)) +
-                (0.000345372 * (t * t * rh)) -
-                (0.000814971 * (t * rh * rh)) +
-                (0.0000102102 * (t * t * rh * rh)) -
-                (0.000038646 * (t * t * t)) +
-                (0.0000291583 * (rh * rh * rh)) +
-                (0.00000142721 * (t * t * t * rh)) +
-                (0.000000197483 * (t * rh * rh * rh)) -
-                (0.0000000218429 * (t * t * t * rh * rh)) +
-                (0.000000000843296 * (t * t * rh * rh * rh)) -
-                (0.0000000000481975 * (t * t * t * rh * rh * rh)));
-            return index;
+            _cancellation.Dispose();
         }
 
         public void Display()
         {
             Console.WriteLine(
                 $"Current conditions: " +
-                $"{_temperature}F degrees and " +
-                $"{_humidity}% humidity" +
-                $"\nHeat index is {_heatIndex}");
+                $"{_weatherData.Temperature}F degrees and " +
+                $"{_weatherData.Humidity}% humidity");
         }
 
+        public void OnCompleted()
+        {
+            Console.WriteLine($"Current Condition Display's Weather Provider is shutting down.");
+        }
+
+        // Update information
+        public void OnNext(WeatherData weatherData)
+        {
+            _weatherData = weatherData;
+            Display();
+        }
+
+        // No implementation needed: Method is not called by the BaggageHandler class.
+        public void OnError(Exception error)
+        {
+            // No implementation.
+        }
     }
 }
