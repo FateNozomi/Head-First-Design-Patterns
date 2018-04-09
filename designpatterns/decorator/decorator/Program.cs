@@ -24,22 +24,34 @@ namespace decorator
 
         private static void DoWork()
         {
-            Beverage espresso = new Espresso();
+            Beverage espresso = new Espresso
+            {
+                Size = Beverage.SizeType.Tall
+            };
             Console.WriteLine($"{espresso.GetDescription()} ${espresso.Cost()}");
 
-            Beverage darkRoast = new DarkRoast();
+            Beverage darkRoast = new DarkRoast
+            {
+                Size = Beverage.SizeType.Venti
+            };
             darkRoast = new Mocha(darkRoast);
             darkRoast = new Mocha(darkRoast);
             darkRoast = new Whip(darkRoast);
             Console.WriteLine($"{darkRoast.GetDescription()} ${darkRoast.Cost()}");
 
-            Beverage houseblend = new HouseBlend();
-            houseblend = new Soy(houseblend);
-            houseblend = new Mocha(houseblend);
-            houseblend = new Whip(houseblend);
-            Console.WriteLine($"{houseblend.GetDescription()} ${houseblend.Cost()}");
+            Beverage houseBlend = new HouseBlend
+            {
+                Size = Beverage.SizeType.Grande
+            };
+            houseBlend = new Soy(houseBlend);
+            houseBlend = new Mocha(houseBlend);
+            houseBlend = new Whip(houseBlend);
+            Console.WriteLine($"{houseBlend.GetDescription()} ${houseBlend.Cost()}");
 
-            Beverage decaf = new Decaf();
+            Beverage decaf = new Decaf
+            {
+                Size = Beverage.SizeType.Venti
+            };
             decaf = new SteamedMilk(decaf);
             decaf = new Mocha(decaf);
             Console.WriteLine($"{decaf.GetDescription()} ${decaf.Cost()}");

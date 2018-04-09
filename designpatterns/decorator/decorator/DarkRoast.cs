@@ -15,7 +15,22 @@ namespace decorator
 
         public override double Cost()
         {
-            return 0.99;
+            double cost = 0.99;
+            switch (Size)
+            {
+                case SizeType.Tall:
+                    cost -= 0.05;
+                    break;
+                case SizeType.Grande:
+                    break;
+                case SizeType.Venti:
+                    cost += 0.05;
+                    break;
+                default:
+                    break;
+            }
+
+            return cost;
         }
     }
 }

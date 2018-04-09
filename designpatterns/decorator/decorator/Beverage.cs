@@ -8,7 +8,16 @@ namespace decorator
 {
     public abstract class Beverage
     {
+        public enum SizeType
+        {
+            Tall,
+            Grande,
+            Venti
+        }
+
         protected string Description { get; set; }
+
+        public SizeType Size { get; set; }
 
         public virtual string GetDescription()
         {

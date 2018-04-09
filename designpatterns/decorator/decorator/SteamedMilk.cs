@@ -13,6 +13,7 @@ namespace decorator
         public SteamedMilk(Beverage beverage)
         {
             _beverage = beverage;
+            Size = _beverage.Size;
         }
 
         public override string GetDescription()
@@ -22,7 +23,23 @@ namespace decorator
 
         public override double Cost()
         {
-            return _beverage.Cost() + 0.10;
+            double cost = _beverage.Cost();
+            switch (Size)
+            {
+                case SizeType.Tall:
+                    cost += 0.05;
+                    break;
+                case SizeType.Grande:
+                    cost += 0.10;
+                    break;
+                case SizeType.Venti:
+                    cost += 0.15;
+                    break;
+                default:
+                    break;
+            }
+
+            return cost;
         }
     }
 }
