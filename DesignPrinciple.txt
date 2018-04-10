@@ -1,39 +1,29 @@
-[STRATEGY PATTERN]
-Definition:
-    The Strategy Pattern defines a family of algorithms, encapsulates each one,
-    and makes them interchangeable. Strategy lets the algorithm vary
-    independently from clients that use it.
-
-1.  Identify the aspects of your application that vary and separate them from
-    what stays the same.
+[OBJECT ORIENTED PRINCIPLES]
+1.  Encapsulate what varies.
+2.  Favor composition over inheritance.
 2.  Program to an interface, not an implementation.
 3.  Favor composition over inheritance.
+4.  Strive for loosely coupled designs between objects that interact.
+5.  Classes should be open for extension but closed for modification.
+6.  Depend upon abstractions. Do not depend upon concrete classes.
 
-[OBSERVER PATTERN]
-Definition:
-    The Observer Pattern defines a one-to-many dependency between objects so
-    that when one object changes state, all of its dependents are notified and
-    updated automatically.
+[OBJECT ORIENTED PATTERNS]
+[Strategy Pattern] - Defines a family of algorithms, encapsulates each one,
+and makes them interchangeable. Strategy lets the algorithm vary independently
+from clients that use it.
 
-1.  Strive for loosely coupled designs between objects that interact.
+[Observer Pattern] - Defines a one-to-many dependency between objects so that
+when one object changes state, all of its dependents are notified and updated
+automatically.
 
-[DECORATOR PATTERN]
-Definition:
-    The Decorator Pattern attaches additional responsibilities to an object
-    dynamically. Decorators provide a flexible alternative to sub-classing for
-    extending functionality.
+[Decorator Pattern] - Attaches additional responsibilities to an object
+dynamically. Decorators provide a flexible alternative to sub-classing for
+extending functionality.
 
-1. Classes should be open for extension but closed for modification.
+[Factory Method Pattern] - Defines an interface for creating an object,
+but lets subclasses decide which class to instantiate. Factory Method lets
+a class defer instantiation to subclasses.
 
-[FACTORY METHOD PATTERN]
-Definition:
-    The Factory Method Pattern defines an interface for creating an object,
-    but lets subclasses decide which class to instantiate. Factory Method lets
-    a class defer instantiation to subclasses.
+[Abstract Factory Pattern] - Provides an interface for creating families of
+related or dependent objects without specifying their concrete classes.
 
-1.  Depend upon abstractions. Do not depend upon concrete classes.
-
-[ABSTRACT FACTORY PATTERN]
-Definition:
-    The Abstract Factory Pattern provides an interface for creating families
-    of related or dependent objects without specifying their concrete classes.
