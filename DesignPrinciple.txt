@@ -24,3 +24,16 @@ Definition:
     extending functionality.
 
 1. Classes should be open for extension but closed for modification.
+
+[FACTORY METHOD PATTERN]
+Definition:
+    The Factory Method Pattern defines an interface for creating an object,
+    but lets subclasses decide which class to instantiate. Factory Method lets
+    a class defer instantiation to subclasses.
+
+1.  Depend upon abstractions. Do not depend upon concrete classes.
+
+[ABSTRACT FACTORY PATTERN]
+Definition:
+    The Abstract Factory Pattern provides an interface for creating families
+    of related or dependent objects without specifying their concrete classes.
