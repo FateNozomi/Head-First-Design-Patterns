@@ -6,6 +6,7 @@
 4.  Strive for loosely coupled designs between objects that interact.
 5.  Classes should be open for extension but closed for modification.
 6.  Depend upon abstractions. Do not depend upon concrete classes.
+7.  Talk only to your friends.
 
 [OBJECT ORIENTED PATTERNS]
 [Strategy Pattern] - Defines a family of algorithms, encapsulates each one,
@@ -34,3 +35,10 @@ global point of access to it.
 parameterize clients with different requests, queue or log requests, and support
 undoable operations.
 
+[Adapter Pattern] - Converts the interface of a class into another interface
+clients expect. Lets classes work together that couldn't otherwise because of
+incompatible interfaces.
+
+[Facade Pattern] - Provides a unified interface to a set of interfaces in a
+subsystem. Facade defines a higher-level interface that makes the subsystem
+easier to use.

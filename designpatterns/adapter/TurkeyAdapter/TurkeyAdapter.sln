@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurkeyAdapter", "TurkeyAdapter\TurkeyAdapter.csproj", "{965B17C7-93D5-4CDC-A45D-17124671B251}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{965B17C7-93D5-4CDC-A45D-17124671B251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965B17C7-93D5-4CDC-A45D-17124671B251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965B17C7-93D5-4CDC-A45D-17124671B251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965B17C7-93D5-4CDC-A45D-17124671B251}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3D2B5A3-269B-4F4B-A829-0741360BA4C7}
+	EndGlobalSection
+EndGlobal
