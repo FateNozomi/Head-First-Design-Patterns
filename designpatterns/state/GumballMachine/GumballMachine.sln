@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GumballMachine", "GumballMachine\GumballMachine.csproj", "{D622D32E-56B5-4A4B-9594-BC8E683576B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GumballMachineFTW", "GumballMachineFTW\GumballMachineFTW.csproj", "{EBB7ECEF-E004-4A72-BA7A-50C55AB7D160}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D622D32E-56B5-4A4B-9594-BC8E683576B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D622D32E-56B5-4A4B-9594-BC8E683576B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D622D32E-56B5-4A4B-9594-BC8E683576B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D622D32E-56B5-4A4B-9594-BC8E683576B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBB7ECEF-E004-4A72-BA7A-50C55AB7D160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB7ECEF-E004-4A72-BA7A-50C55AB7D160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB7ECEF-E004-4A72-BA7A-50C55AB7D160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB7ECEF-E004-4A72-BA7A-50C55AB7D160}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF69A39B-79E7-4ADF-8A78-30F5B7C50F8F}
+	EndGlobalSection
+EndGlobal
